@@ -1,4 +1,4 @@
-{{}}, v-text, v-html
+<h1>{{}}, v-text, v-html</h1>
 
     <div id="app">
         <input v-model="message">
@@ -19,7 +19,7 @@
 https://kr.vuejs.org/v2/style-guide/index.html#%ED%85%9C%ED%94%8C%EB%A6%BF%EC%97%90%EC%84%9C-%EB%8B%A8%EC%88%9C%ED%95%9C-%ED%91%9C%ED%98%84%EC%8B%9D-%EB%A7%A4%EC%9A%B0-%EC%B6%94%EC%B2%9C%ED%95%A8
 
 <hr>
-v-for
+<h1>v-for</h1>
 
     <div id="app">
         <span v-for="item in text">{{item}}</span>
@@ -49,7 +49,7 @@ v-for
     <span>!</span>
    
 <hr>
-v-for v-if
+<h1>v-for v-if</h1>
 
     <div id="app">
         <ul>
@@ -77,5 +77,5 @@ https://kr.vuejs.org/v2/style-guide/index.html#v-if%EC%99%80-v-for%EB%A5%BC-%EB%
     
     
 <hr>
-v-for key
+<h1>v-for key</h1>
 v-for와 key값을 항상 사용해야된다
