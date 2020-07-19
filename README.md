@@ -7,7 +7,6 @@
         <p>{{ message.length >= 10 ? '10글자 이상' : '10글자 미만'}}</p>
         <p>{{var a = message}}</p>                                                              
     </div>
-    
 <br>
 
     var app = new Vue({
@@ -25,7 +24,6 @@ v-for
     <div id="app">
         <span v-for="item in text">{{item}}</span>
     </div>
-
 <br>
 
     var app = new Vue({
@@ -36,7 +34,7 @@ v-for
     });
     
 <br>
-
+    
     <span>h</span>
     <span>e</span>
     <span>l</span>
@@ -49,6 +47,35 @@ v-for
     <span>l</span>
     <span>d</span>
     <span>!</span>
-    
+   
+<hr>
+v-for v-if
 
+    <div id="app">
+        <ul>
+            <li v-for="user in users" v-if="user.isActive" :key="user.id">
+              {{ user.name }}
+            </li>
+        </ul>
+    </div>
+<br>
+
+    var app = new Vue({
+        el: '#app',
+        data: {
+            users:[
+                {id: 'p1234', name:'홍길동1', isActive: 'true'},
+                {id: 'pppps', name:'홍길동2', isActive: 'false'},
+                {id: 'sssss', name:'홍길동3', isActive: 'false'}
+            ],
+        }
+    })
     
+v-for가 사용된 엘리먼트에 절대 v-if를 사용하지 마세요.
+v-for가 v-if 보다 먼저 렌더링 되기 때문<br>
+https://kr.vuejs.org/v2/style-guide/index.html#v-if%EC%99%80-v-for%EB%A5%BC-%EB%8F%99%EC%8B%9C%EC%97%90-%EC%82%AC%EC%9A%A9%ED%95%98%EC%A7%80-%EB%A7%88%EC%84%B8%EC%9A%94-%ED%95%84%EC%88%98
+    
+    
+<hr>
+v-for key
+v-for와 key값을 항상 사용해야된다
