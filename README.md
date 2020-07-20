@@ -125,3 +125,83 @@
 - v-on:keyup.enter - 키 이벤트를 발생한다.
 - v-model.trim - 좌우 공백 제거한다.
 - v-model.lazy - input 태그에 포커스가 벗어나면 업데이트를 한다.
+
+<h1>TodoList 연습</h1>
+
+    <!doctype html>
+    <html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+
+    <body>
+        <div id="app">
+            <div class="container">
+                <form v-on:submit.prevent="inputList">                      <!--v-on:keyup.enter="function" form 태그 사용시 x-->
+                    <input type="text" v-model="inputItem">
+                    <button>입력</button>
+                </form>
+                <hr>
+                <ol>            
+                    <li class="todo_list" v-for="(item, index) in todoList" :key="index">  <!--v-for는 key와 항상 함께 사용합니다.-->
+                        {{item.todo}}                                                               
+                    <button v-on:click="deleteList(index)">완료</button>   <!-- v-on:click="doSomething" @click="doSomething"@[event]="doSomething" -->
+                    </li>
+                </ol>
+                <hr>
+                <ol> 
+                    <li class="todo_list" v-for="item in doneList">
+                        <del>{{item.todo}}</del>
+                    </li>
+                </ol>
+                <button v-on:click="allDelete">All</button>
+            </div>
+        </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data:{
+                inputItem:"",
+                todoList:[],
+                doneList:[],    
+            },
+            methods:{
+                inputList(e){
+                    e.preventDefault();
+                    if(this.inputItem !== ""){ 
+                        this.todoList.push({done: false, todo:this.inputItem});
+                        this.inputItem ="";
+                    }
+                },
+                deleteList(index){
+                    this.todoList[index].done = "true";
+                    console.log(this.todoList[index]);
+                    this.doneList.push(this.todoList[index]);
+                    this.todoList.splice(index,1)
+                },
+                allDelete(){
+                    this.todoList = [];
+                    this.doneList = [];
+                }
+            }
+        })
+    </script>
+    <style>
+        .container{
+            margin: 0;
+            text-align: center;
+        }
+        .todo_list{
+            font-size: 20px;
+            height: 10%;
+        }
+
+    </style>
+    </body>
+    </html>
