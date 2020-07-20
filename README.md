@@ -82,9 +82,6 @@
     
     
 <hr>
-
-<hr>
-
 <h1> v-on:submit.prevent / v-on:click.once / v-on:keyup.enter </h1>
 <h1> v-model.trim / v-model.lazy </h1>
 
