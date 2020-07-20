@@ -1,3 +1,7 @@
+firefox vue.js devtools https://addons.mozilla.org/ko/firefox/addon/vue-js-devtools/
+chrome vue.js devtools https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd
+
+<br>
 <h1>{{}}, v-text, v-html</h1>
 
     <div id="app">
