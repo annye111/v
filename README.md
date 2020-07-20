@@ -125,7 +125,7 @@
 - v-on:keyup.enter - 키 이벤트를 발생한다.
 - v-model.trim - 좌우 공백 제거한다.
 - v-model.lazy - input 태그에 포커스가 벗어나면 업데이트를 한다.
-
+<hr>
 <h1>TodoList 연습</h1>
 
     <!doctype html>
