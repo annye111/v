@@ -82,6 +82,7 @@
         }
     })
     
+    
 - v-for가 v-if 보다 먼저 렌더링 되기 때문에 v-for가 사용된 엘리먼트에 되도록 v-if를 사용하면 안된다.
 - https://kr.vuejs.org/v2/style-guide/index.html#v-if%EC%99%80-v-for%EB%A5%BC-%EB%8F%99%EC%8B%9C%EC%97%90-%EC%82%AC%EC%9A%A9%ED%95%98%EC%A7%80-%EB%A7%88%EC%84%B8%EC%9A%94-%ED%95%84%EC%88%98
     
