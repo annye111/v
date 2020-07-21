@@ -1,6 +1,6 @@
 <h1>Vue.js devtools</h1>
-<p>firefox vue.js devtools https://addons.mozilla.org/ko/firefox/addon/vue-js-devtools/</p>
-<p>chrome vue.js devtools https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd</p>
+<h3>firefox vue.js devtools</h3> <p>https://addons.mozilla.org/ko/firefox/addon/vue-js-devtools/</p>
+<h3>chrome vue.js devtools</h3> <p>https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd</p>
 
 <hr>
 <h1>{{}}, v-text, v-html</h1>
