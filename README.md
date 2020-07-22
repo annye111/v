@@ -149,15 +149,15 @@
     <body>
         <div id="app">
             <div class="container">
-                <form v-on:submit.prevent="inputList">                      <!--v-on:keyup.enter="function" form 태그 사용시 x-->
+                <form v-on:submit.prevent="inputList">                    
                     <input type="text" v-model="inputItem">
                     <button>입력</button>
                 </form>
                 <hr>
                 <ol>            
-                    <li class="todo_list" v-for="(item, index) in todoList" :key="index">  <!--v-for는 key와 항상 함께 사용합니다.-->
+                    <li class="todo_list" v-for="(item, index) in todoList" :key="index"> 
                         {{item.todo}}                                                               
-                    <button v-on:click="deleteList(index)">완료</button>   <!-- v-on:click="doSomething" @click="doSomething"@[event]="doSomething" -->
+                    <button v-on:click="deleteList(index)">완료</button>   
                     </li>
                 </ol>
                 <hr>
